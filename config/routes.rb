@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/users', to: 'users#index'
-  get '/register', to: 'users#new'
+  get '/signup', to: 'users#new'
   post '/users', to: 'users#create'
 
 

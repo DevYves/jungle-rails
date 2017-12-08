@@ -11,7 +11,7 @@
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
-
+<!-- Display Products -->
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Name</dt>
@@ -26,6 +26,21 @@
       </div>
     </div>
 
+<!-- Display reviews -->
+    <div class="row">
+      <% @product.reviews.each do |review| %>
+      <div class="col-sm-8">
+        <dl class="dl-horizontal">
+          <dt>User name</dt>
+          <dd><%= reviewer(review.user_id) %></dd>
+          <dt>Rating</dt>
+          <dd><%= review.rating %></dd>
+          <dt>Review</dt>
+          <dd><%= review.description %></dd>
+        </dl>
+      </div>
+      <% end %>
+    </div>
   </article>
 
 </section>

@@ -35,7 +35,7 @@ puts "Re-creating Products ..."
 
 Product.destroy_all
 
-cat1.products.create!({
+product1 = cat1.products.create!({
   name:  'Men\'s Classy shirt',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
@@ -134,3 +134,61 @@ cat3.products.create!({
 
 
 puts "DONE!"
+
+## CREATING REVIEWS
+
+Review.destroy_all
+
+Reviews.create!({
+  user_id: 1,
+  product_id: 2,
+  description: 'Nice',
+  rating: 5
+  })
+
+Review.create!({
+  user_id: 1,
+  product_id: 3,
+  description: 'Itchy',
+  rating: 1
+  })
+
+Review.create!({
+  user_id:1,
+  product_id: 1,
+  description: 'Awesome',
+  rating: 5
+  })
+
+Review.create!({
+  user_id:1,
+  product_id: 4,
+  description: "These socks were filled with pabst...",
+  rating: 3
+  })
+
+Review.create!({
+  user_id: 1,
+  product_id: 5,
+  description: "My books have never looked so at home",
+  rating: 4
+  })
+
+puts "Done creating reviews"
+
+## USERS
+
+puts "Creating Users ..."
+
+User.destroy_all
+
+User.create!({
+  name:'Reviewer',
+  email: 'reviews@jungle.com',
+  password_digest: 'hello'
+})
+
+
+puts "DONE!"
+
+

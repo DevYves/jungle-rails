@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
+  def reviewer(user_id)
+    @reviewer = User.find(user_id)
+    "#{@reviewer.name}"
+  end
+  helper_method :reviewer
 
   private
 
