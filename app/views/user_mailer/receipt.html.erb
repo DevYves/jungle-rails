@@ -1,0 +1,10 @@
+<h1>Here is the reciept of your recent purchases from the Jungle!</h1>
+<p>Your order ID: <%= @order.id %>
+<p>Your purchases: <p>
+<ul>
+<% @order.line_items.each do |item| %>
+    <% product = Product.find_by(id: item.product) %>
+    <li><%= item.quantity %> - <%= product.name %></li>
+<% end %>
+</ul>
+<p>Your total: $<%= Money.new(@order.total_cents)%></p>
