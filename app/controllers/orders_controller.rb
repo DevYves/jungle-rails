@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @line_items = @order.line_items
   end
 
   def create
@@ -32,6 +33,7 @@ class OrdersController < ApplicationController
       amount:      cart_total, # in cents
       description: "Khurram Virani's Jungle Order",
       currency:    'cad'
+
     )
   end
 
