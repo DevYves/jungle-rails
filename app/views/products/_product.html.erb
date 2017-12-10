@@ -25,5 +25,17 @@
        SOLD OUT!
      </aside>
    <% end %>
+   Average Rating:
+  <aritcle>
+ <span class="label label-primary">
+   <% @ratings = Review.where(product_id: product.id).pluck(:rating) %>
+     <% if @ratings.size != 0 %>
+       <% @average = @ratings.sum.to_f/@ratings.size %>
+
+      <%= @average %>
+      <% else %>
+       No Reviews Yet
+     <% end %>
+ </span></a><br>
 </article>
 

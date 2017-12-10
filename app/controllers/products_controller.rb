@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all.order(created_at: :desc)
+
   end
 
   def show
@@ -9,5 +10,6 @@ class ProductsController < ApplicationController
     @reviews = @product.reviews
     @review = Review.new
   end
+
 
 end
