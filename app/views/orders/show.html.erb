@@ -1,14 +1,11 @@
 <section class="orders-show">
-
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>
-
-<h4>Thank you for your order!</h4>
+  <h4>Thank you for your order!</h4>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -22,17 +19,16 @@
       <tbody>
         <% total_price = 0 %>
         <% @line_items.each do |item| %>
-        <tr>
-          <td><%= item.quantity %></td>
-          <td><%= @order.email %></td>
-          <td><%=Product.find_by(id: item.product_id).name%></td>
-          <td><%=Product.find_by(id: item.product_id).description %></td>
-          <td><%=item.total_price_cents.to_f / 100 %></td>
-          <td><%=image_tag Product.find_by(id: item.product_id).image.tiny %></td>
-        </tr>
+          <tr>
+            <td><%= item.quantity %></td>
+            <td><%= @order.email %></td>
+            <td><%=Product.find_by(id: item.product_id).name%></td>
+            <td><%=Product.find_by(id: item.product_id).description %></td>
+            <td><%=item.total_price_cents.to_f / 100 %></td>
+            <td><%=image_tag Product.find_by(id: item.product_id).image.tiny %></td>
+          </tr>
           <% total_price +=  item.total_price_cents.to_f / 100%>
-          <% end %>
-
+        <% end %>
       </tbody>
       <tfoot>
         <tr>
