@@ -11,7 +11,7 @@ A mini e-commerce application built with Rails 4.2. This project required taking
 !["Screenshot of product Sold Out Badge."](https://github.com/DevYves/jungle-rails/blob/master/docs/sold-out.png)
 
 ### Review Process
-!["Screenshot of Review Process."](https://github.com/DevYves/jungle-rails/blob/master/docs/review-proccess.png)
+!["Screenshot of Review Process."](https://github.com/DevYves/jungle-rails/blob/master/docs/review-process.png)
 
 ## Setup
 
