@@ -1,11 +1,21 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2. This project required taking a legacy codebase and updating features and security protocols based on new business criteria.
 
+## Screenshots
+
+### Product with average rating
+!["Screenshot of Average Rating.""](https://github.com/johnniereg/jungle-rails/blob/master/docs/average-rating.png)
+
+### Sold Out Badge
+!["Screenshot of product Sold Out Badge."](https://github.com/DevYves/jungle-rails/blob/master/docs/sold-out.png)
+
+### Review Process
+!["Screenshot of Review Process."](https://github.com/johnniereg/jungle-rails/blob/master/docs/review-proccess.png)
 
 ## Setup
 
-1. Fork & Clone
+1. Download
 2. Run `bundle install` to install dependencies
 3. Create `config/database.yml` by copying `config/database.example.yml`
 4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
