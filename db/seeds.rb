@@ -55,7 +55,7 @@ product3 = cat1.products.create!({
   name:  'Hipster Hat',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel3.jpg'),
-  quantity: 0,
+  quantity: 10,
   price: 34.49
 })
 
@@ -104,7 +104,7 @@ product9 = cat2.products.create!({
   name:  'World\'s Largest Smartwatch',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics3.jpg'),
-  quantity: 32,
+  quantity: 0,
   price: 2_026.29
 })
 
@@ -132,17 +132,66 @@ product12 = cat3.products.create!({
   price: 2_483.75
 })
 
+#Users
+
 User.create({
-  name: "wammy",
-  email: "warthog@hello.com",
+  name: "Larry",
+  email: "Larry@example.com",
+  password: "awelkf20913of31no31fd"
+  })
+
+User.create({
+  name: "Mary",
+  email: "Maryexample.com",
   password: "awelkf20913of31no31fd"
   })
 #Reviews
-#
+
+
+puts "DONE!"
+product1.reviews.create!({
+  product: product12,
+  user_id: 1 ,
+  description:'Not so classy',
+  rating:'1'
+  })
+
+product1.reviews.create!({
+  product: product12,
+  user_id: 2 ,
+  description:'Fluffy looks so handsome in his new shirt',
+  rating:'4'
+  })
+
+product11.reviews.create!({
+  product: product12,
+  user_id: 1 ,
+  description:'What..?! Just.. why..?',
+  rating:'1'
+  })
+
+product11.reviews.create!({
+  product: product12,
+  user_id: 2 ,
+  description:'Not cat friendly at all.',
+  rating:'2'
+  })
+
+
 product12.reviews.create!({
   product: product12,
   user_id: 1 ,
   description:'Pretty, pretty... pretty good.',
   rating:'4'
   })
-puts "DONE!"
+
+
+product12.reviews.create!({
+  product: product12,
+  user_id: 2 ,
+  description:'My cat just loves it!',
+  rating:'5'
+  })
+
+
+
