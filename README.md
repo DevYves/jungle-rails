@@ -5,13 +5,13 @@ A mini e-commerce application built with Rails 4.2. This project required taking
 ## Screenshots
 
 ### Product with average rating
-!["Screenshot of Average Rating.""](https://github.com/johnniereg/jungle-rails/blob/master/docs/average-rating.png)
+!["Screenshot of Average Rating.""](https://github.com/DevYves/jungle-rails/blob/master/docs/average-rating.png)
 
 ### Sold Out Badge
 !["Screenshot of product Sold Out Badge."](https://github.com/DevYves/jungle-rails/blob/master/docs/sold-out.png)
 
 ### Review Process
-!["Screenshot of Review Process."](https://github.com/johnniereg/jungle-rails/blob/master/docs/review-proccess.png)
+!["Screenshot of Review Process."](https://github.com/DevYves/jungle-rails/blob/master/docs/review-proccess.png)
 
 ## Setup
 
