@@ -9,14 +9,19 @@
     <%= product.description %>
   </p>
   <footer class="actions">
-    <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
-      <%= fa_icon "shopping-cart", text: 'Add' %>
-    <% end %>
-    <%= link_to product, class: 'btn btn-default pull-right' do %>
+    <% if product.quantity < 1 %>
+      <%= link_to product, class: 'btn btn-default pull-right' do %>
       Details &raquo;
-    <% end %>
+      <%end%>
+    <%else%>
+      <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
+      <%= fa_icon "shopping-cart", text: 'Add' %>
+      <% end %>
+      <%= link_to product, class: 'btn btn-default pull-right' do %>
+      Details &raquo;
+      <% end %>
+    <%end%>
   </footer>
-
   <aside class="price">
     <%= humanized_money_with_symbol product.price %>
   </aside>
@@ -31,7 +36,6 @@
    <% @ratings = Review.where(product_id: product.id).pluck(:rating) %>
      <% if @ratings.size != 0 %>
        <% @average = @ratings.sum.to_f/@ratings.size %>
-
       <%= @average %>
       <% else %>
        No Reviews Yet
