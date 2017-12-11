@@ -26,7 +26,6 @@ RSpec.describe Product, type: :model do
       expect(product.errors.full_messages).to include('Product Validations should not be valid without a quanitity')
     end
     it 'should not be valid without a category' do
-      category = Category.create!(name: 'Furniture')
       product = Product.create!(name: 'Hipster Box', price: 10, quantity: 10, category: nil)
       expect(product).to_not be_valid
       expect(product.errors.full_messages).to include('Product Validations should not be valid without a category')
