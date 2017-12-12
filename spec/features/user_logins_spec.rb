@@ -26,6 +26,6 @@ scenario "They complete an order while logged in" do
     save_screenshot
   end
 
-  expect(page).to have_content 'Products'
+  expect(page).to have_content 'Logout'
   end
 end
