@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def reviewer(user_id)
     @reviewer = User.find(user_id)
-    "#{@reviewer.name}"
+    "#{@reviewer.first_name}"
   end
   helper_method :reviewer
 
