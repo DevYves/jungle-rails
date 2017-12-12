@@ -15,21 +15,25 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     end
   end
 
-  scenario "They click on a product's details and visit the details page" do
+
+
+
+scenario "They click on add to cart and the cart's item count is updated on the home page" do
   # ACT
   visit root_path
   save_screenshot
 
-
-  first('article.product').find_link('Details').click
+  first('article.product').find_link('Add').click
   sleep(2)
 
 
   # DEBUG / VERIFY
   save_screenshot
   puts page.html
-
+  expect(page).to have_content 'My Cart (1)'
   end
+
+
 
 
 end
